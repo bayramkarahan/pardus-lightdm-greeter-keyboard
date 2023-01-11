@@ -8,7 +8,11 @@ Homepage: https://www.pardus.org.tr
 
 Package: pardus-lightdm-greeter-qrcode
 Architecture: all
-Depends: pardus-lightdm-greeter
+Depends: ${misc:Depends}, libc6,
+         lightdm,
+         gir1.2-lightdm-1,
+         gir1.2-gtk-3.0,
+         gir1.2-webkit2-4.0,
          python3-qrcode
 Description: Pardus Greeter QR plugin
  Pardus greeter qr plugin
