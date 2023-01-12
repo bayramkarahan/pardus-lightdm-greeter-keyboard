@@ -10,6 +10,7 @@ def module_init():
     icon = Gtk.Image()
     icon.set_from_file("/usr/share/icons/hicolor/scalable/status/keyboard.svg")
     button = Gtk.Button(image=icon)
+    button.get_style_context().add_class("icon")
     button.connect("clicked", _klv_button_event)
     loginwindow.o("ui_box_bottom_right").pack_start(button, False, True, 10)
     button.show_all()
