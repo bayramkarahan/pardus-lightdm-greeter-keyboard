@@ -1,4 +1,4 @@
-Source: pardus-lightdm-greeter-qrcode
+Source: pardus-lightdm-greeter-keyboard
 Section: misc
 Priority: optional
 Maintainer: Ali Riza KESKIN <aliriza.keskin@pardus.org.tr>
@@ -6,7 +6,7 @@ Build-Depends: debhelper (>= 10), make
 Standards-Version: 4.3.0
 Homepage: https://www.pardus.org.tr
 
-Package: pardus-lightdm-greeter-qrcode
+Package: pardus-lightdm-greeter-keyboard
 Architecture: all
 Depends: ${misc:Depends}, libc6,
          lightdm,
@@ -14,5 +14,5 @@ Depends: ${misc:Depends}, libc6,
          gir1.2-gtk-3.0,
          gir1.2-webkit2-4.0,
          python3-qrcode
-Description: Pardus Greeter QR plugin
- Pardus greeter qr plugin
+Description: Pardus Greeter Keyboard plugin
+ Pardus greeter Keyboard plugin
