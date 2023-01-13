@@ -1,4 +1,4 @@
 2b58a32f10be78a5d0721e3ae9903183  usr/share/doc/pardus-lightdm-greeter-keyboard/changelog.gz
 c1b7e01b6b2d462b7fd9b69edb2379e2  usr/share/doc/pardus-lightdm-greeter-keyboard/copyright
 6de9bd80d433019ebacc42d1731bd717  usr/share/icons/hicolor/scalable/status/keyboard.svg
-f309baad9e73eced1d2f738abd59e8e3  usr/share/pardus/pardus-lightdm-greeter/module/_keyboard.py
+ce3f7df2d3ff4abd08b9301a3005597e  usr/share/pardus/pardus-lightdm-greeter/module/_keyboard.py
