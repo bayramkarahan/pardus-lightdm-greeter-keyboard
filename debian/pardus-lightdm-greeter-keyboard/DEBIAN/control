@@ -2,7 +2,7 @@ Package: pardus-lightdm-greeter-keyboard
 Version: 1.0
 Architecture: all
 Maintainer: Ali Riza KESKIN <aliriza.keskin@pardus.org.tr>
-Installed-Size: 28
+Installed-Size: 67
 Depends: libc6, lightdm, gir1.2-lightdm-1, gir1.2-gtk-3.0, gir1.2-webkit2-4.0, python3-qrcode
 Section: misc
 Priority: optional

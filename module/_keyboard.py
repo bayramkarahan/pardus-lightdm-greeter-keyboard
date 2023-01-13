@@ -1,25 +1,36 @@
 import asyncio
 durum=0
+icon=None
+def _k_button_event(widget=None, event=None):
+     if durum==0:
+         durum=1
+         os.system(get("screen-keyboard", "sh -c 'pkill e-keyboard;/usr/bin/e-keyboard login;'", "keyboard")+"&")
+         icon.set_from_file("/usr/share/icons/hicolor/scalable/status/keyboardoff.svg")
+         
 def _klv_button_event(widget=None):
-     #os.system(get("screen-keyboard", "sh -c 'pkill e-keyboard;/usr/bin/e-keyboard login;'", "keyboard")+"&")
-     #loginwindow.o("ui_entry_password").grab_focus()
      global durum
      if durum==0:
          durum=1
          os.system(get("screen-keyboard", "sh -c 'pkill e-keyboard;/usr/bin/e-keyboard login;'", "keyboard")+"&")
+         icon.set_from_file("/usr/share/icons/hicolor/scalable/status/keyboardoff.svg")
+         loginwindow.o("ui_entry_password").grab_focus()
      elif durum==1:
          durum=0
          os.system(get("screen-keyboard", "sh -c 'pkill e-keyboard;'", "keyboard")+"&")
-     loginwindow.o("ui_entry_password").grab_focus()
+         icon.set_from_file("/usr/share/icons/hicolor/scalable/status/keyboardon.svg")
+         loginwindow.o("ui_entry_password").grab_focus()
 
 def module_init():
     global durum
+    global icon
     icon = Gtk.Image()
-    icon.set_from_file("/usr/share/icons/hicolor/scalable/status/keyboard.svg")
-    button = Gtk.Button(image=icon)
+    icon.set_from_file("/usr/share/icons/hicolor/scalable/status/keyboardon.svg")
+    #button = Gtk.Button(image=icon)
+    button = Gtk.Button()
+    button.add(icon)
     button.get_style_context().add_class("icon")
     button.connect("clicked", _klv_button_event)
     loginwindow.o("ui_box_bottom_right").pack_start(button, False, True, 10)
     button.show_all()
-    #loginwindow.o("ui_entry_passwords").connect("focus-in-event",_klv_button_event)
+    #loginwindow.o("ui_entry_password").connect("focus-in-event",_k_button_event)
 
