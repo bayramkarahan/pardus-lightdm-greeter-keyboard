@@ -2,10 +2,8 @@ import asyncio
 durum=0
 icon=None
 def _k_button_event(widget=None, event=None):
-     if durum==0:
-         durum=1
-         os.system(get("screen-keyboard", "python3 /usr/share/osk/application.py", "keyboard")+"&")
-         icon.set_from_file("/usr/share/icons/hicolor/scalable/status/keyboardoff.svg")
+     os.system(get("screen-keyboard", "python3 /usr/share/osk/application.py", "keyboard")+"&")
+     #icon.set_from_file("/usr/share/icons/hicolor/scalable/status/keyboardoff.svg")
          
 def _klv_button_event(widget=None):
      global durum
