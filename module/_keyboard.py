@@ -29,6 +29,7 @@ def module_init():
     button = Gtk.Button()
     button.add(icon)
     button.get_style_context().add_class("icon")
+    button.connect("clicked", _k_button_event)
     #button.connect("clicked", _klv_button_event)
     loginwindow.o("ui_box_bottom_right").pack_start(button, False, True, 10)
     button.show_all()
