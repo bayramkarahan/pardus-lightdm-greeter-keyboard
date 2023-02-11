@@ -4,7 +4,7 @@ icon=None
 def _k_button_event(widget=None, event=None):
      if durum==0:
          durum=1
-         os.system(get("screen-keyboard", "sh -c 'pkill e-keyboard;/usr/bin/e-keyboard login;'", "keyboard")+"&")
+         os.system(get("screen-keyboard", "python3 /usr/share/osk/application.py", "keyboard")+"&")
          icon.set_from_file("/usr/share/icons/hicolor/scalable/status/keyboardoff.svg")
          
 def _klv_button_event(widget=None):
@@ -29,7 +29,7 @@ def module_init():
     button = Gtk.Button()
     button.add(icon)
     button.get_style_context().add_class("icon")
-    button.connect("clicked", _klv_button_event)
+    #button.connect("clicked", _klv_button_event)
     loginwindow.o("ui_box_bottom_right").pack_start(button, False, True, 10)
     button.show_all()
     #loginwindow.o("ui_entry_password").connect("focus-in-event",_k_button_event)
