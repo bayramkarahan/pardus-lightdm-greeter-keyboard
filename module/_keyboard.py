@@ -2,7 +2,10 @@ import asyncio
 durum=0
 icon=None
 def _k_button_event(widget=None, event=None):
-     os.system(get("screen-keyboard", "python3 /usr/share/osk/application.py", "keyboard")+"&")
+     os.system("setxkbmap tr")
+     os.system("onboard --theme=/usr/share/onboard/themes/Nightshade.theme --layout=/usr/share/onboard/layouts/'Full Keyboard.onboard'&")
+     
+     #os.system(get("screen-keyboard", "onboard", "keyboard")+"&")     
      #icon.set_from_file("/usr/share/icons/hicolor/scalable/status/keyboardoff.svg")
      loginwindow.o("ui_entry_password").grab_focus()
          
