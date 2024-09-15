@@ -3,8 +3,8 @@ durum=0
 icon=None
 def _k_button_event(widget=None, event=None):
      os.system("setxkbmap tr")
-     #os.system("onboard --theme=/usr/share/onboard/themes/Nightshade.theme --layout=/usr/share/onboard/layouts/'Full Keyboard.onboard'&")
-     os.system("pkill e-keyboard;/usr/bin/e-keyboard show&")
+     os.system("onboard --theme=/usr/share/onboard/themes/Nightshade.theme --layout=/usr/share/onboard/layouts/'Full Keyboard.onboard'&")
+     #os.system("pkill e-keyboard;/usr/bin/e-keyboard show&")
      
      #os.system(get("screen-keyboard", "onboard", "keyboard")+"&")     
      #icon.set_from_file("/usr/share/icons/hicolor/scalable/status/keyboardoff.svg")
